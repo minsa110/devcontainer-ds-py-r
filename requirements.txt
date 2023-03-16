@@ -1,0 +1,6 @@
+ipykernel # required for jupyter notebook in VS Code
+pandas
+numpy
+matplotlib
+plotly
+seaborn

@@ -1,12 +1,11 @@
 {
 	"name": "Data Science (Python and R)",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
-
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
 	// Features to add to the dev container. More info: https://containers.dev/features.
-    "features": {
-        "ghcr.io/devcontainers/features/python:1": {
+	"features": {
+		"ghcr.io/devcontainers/features/python:1": {
 			"version": "latest"
-		  },
+		},
 		"ghcr.io/rocker-org/devcontainer-features/r-apt:latest": {
 			"vscodeRSupport": "full",
 			"installDevTools": true,
@@ -15,20 +14,17 @@
 			"installVscDebugger": true
 		},
 		"ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
-			"packages": "r-cran-arrow,,r-cran-brms,r-cran-bspm,r-cran-btyd,r-cran-btydplus,r-cran-data.table,r-cran-ggalluvial,r-cran-ggally,r-cran-ggdag,r-cran-ggdist,r-cran-ggextra,r-cran-ggridges,r-cran-ggthemes,r-cran-gt,r-cran-gtsummary,r-cran-here,r-cran-patchwork,r-cran-lme4,r-cran-nlme,r-cran-plotly,r-cran-prophet,r-cran-scales,r-cran-showtext,r-cran-survival,r-cran-survminer,r-cran-tidyverse,r-cran-traminer,r-cran-whisker",
+			"packages": "r-cran-bspm,r-cran-data.table,r-cran-tidyverse",
 			"upgradePackages": true
 		}
-    },
+	},
 	"overrideFeatureInstallOrder": [
 		"ghcr.io/rocker-org/devcontainer-features/r-apt"
 	],
-
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "if [ -f requirements.txt* ]; then pip install -r requirements.txt; fi",
-
+	"postCreateCommand": "pip install ipykernel ipywidgets pandas numpy matplotlib seaborn scikit-learn",
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
-
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
@@ -61,7 +57,6 @@
 			]
 		}
 	},
-
 	// Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "vscode"
 }

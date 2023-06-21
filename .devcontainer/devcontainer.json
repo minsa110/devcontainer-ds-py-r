@@ -22,7 +22,7 @@
 		"ghcr.io/rocker-org/devcontainer-features/r-apt"
 	],
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pip install ipykernel ipywidgets pandas numpy matplotlib seaborn scikit-learn",
+	"postCreateCommand": "pip install ipykernel ipywidgets pandas numpy matplotlib seaborn scikit-learn && if [ -f requirements.txt* ]; then pip install -r requirements.txt; fi",
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 	// Configure tool-specific properties.

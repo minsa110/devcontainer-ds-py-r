@@ -1,8 +1,0 @@
-ipykernel # required for jupyter notebook in VS Code
-ipywidgets
-pandas
-numpy
-matplotlib
-plotly
-seaborn
-scikit-learn
